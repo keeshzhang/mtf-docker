@@ -1,16 +1,7 @@
 
+git clone https://github.com/keeshzhang/mtf-cms.git ~/mtf-cms
 
-if [ -d "~/mtf-cms" ]; then
-	git clone https://github.com/keeshzhang/mtf-cms.git ~/mtf-cms
-else
-	cd ~/mtf-cms && git pull origin master
-fi
-
-if [ -d "~/mtf-cms-a4" ]; then 
-	git clone https://github.com/keeshzhang/mtf-cms-a4.git ~/mtf-cms-a4	
-else
-	cd ~/mtf-cms && git pull origin master
-fi 
+git clone https://github.com/keeshzhang/mtf-cms-a4.git ~/mtf-cms-a4	
 
 docker pull ubuntu:16.10
 docker pull chunhui2001/ubuntu_1610_dev:java8_mtf_server
