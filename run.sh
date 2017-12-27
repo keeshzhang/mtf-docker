@@ -1,14 +1,10 @@
 
 
-if [ -d "~/mtf-cms" ]; then
-	cd ~/mtf-cms && git pull origin master
-else
+if [ ! -d "~/mtf-cms" ]; then
 	git clone https://github.com/keeshzhang/mtf-cms.git ~/mtf-cms
 fi
 
-if [ -d "~/mtf-cms-a4" ]; then 
-	cd ~/mtf-cms-a4 && git pull origin master
-else
+if [ ! -d "~/mtf-cms-a4" ]; then 
 	git clone https://github.com/keeshzhang/mtf-cms-a4.git ~/mtf-cms-a4	
 fi 
 
