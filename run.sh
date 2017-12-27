@@ -9,7 +9,7 @@ fi
 if [ -d "~/mtf-cms-a4" ]; then 
 	git clone https://github.com/keeshzhang/mtf-cms-a4.git ~/mtf-cms-a4	
 else
-	cd ~/mtf-cms-a4 && git pull origin master
+	cd ~/mtf-cms && git pull origin master
 fi 
 
 docker pull ubuntu:16.10
