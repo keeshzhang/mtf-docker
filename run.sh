@@ -22,3 +22,4 @@ docker create -p 9180:9181 --name app.mtfcms.server.java --volumes-from app.mtfc
 
 #docker restart app.mtfcms.server.hub && docker logs -f app.mtfcms.server.hub
 docker start app.mtfcms.server.java && docker logs -f app.mtfcms.server.java
+docker restart app.mtfcms.server.java && docker logs -f app.mtfcms.server.java
