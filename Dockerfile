@@ -45,8 +45,11 @@ RUN ln -s /usr/local/apache-ant-1.10.1 /usr/local/ant && ln -s /usr/local/apache
 RUN npm install -g @angular/cli --registry https://registry.cnpmjs.org
 
 ADD ansinble.sh /root/ansinble.sh
+ADD mtf_agent_rsa /root/.ssh/mtf_agent_rsa
+ADD mtf_agent_rsa.pub /root/.ssh/mtf_agent_rsa.pub
 RUN chmod +x /root/ansinble.sh
-RUN gulp -v
+RUN chmod 400 /root/.ssh/mtf_agent_rsa*
+RUN eval `ssh-agent -s` && ssh-add /root/.ssh/mtf_agent_rsa
 
 
 WORKDIR /root/app/mtf-cms
